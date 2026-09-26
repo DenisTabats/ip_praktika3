@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid сетка</title>
+    <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    body {
+        background: #c3e2e6;
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+    }
+
+    header {
+        display: grid;
+        grid-auto-columns: 150px 1fr 150px;
+        gap: 15px 25px;
+        width: 100%;
+    }
+
+    .logo,
+    .login {
+        background: #34b56d;
+        height: 80px;
+    }
+
+    .logo {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .login {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .search {
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        height: 80px;
+    }
+
+    .search__input {
+        flex: 1;
+        border: none;
+        padding: 0 20px;
+        font-size: 24px;
+    }
+
+    .search__button {
+        background: #d67598;
+        border: none;
+        padding: 0 30px;
+        font-size: 24px;
+    }
+
+    .options {
+        grid-column: 2;
+        grid-row: 2;
+        display: flex;
+        gap: 15px;
+        height: 50px;
+    }
+
+    .options__button {
+        flex: 1;
+        background: #3d76b5;
+        color: #fff;
+        border: none;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"></div>
+        <form class="search">
+            <input class="search__input" type="text" placeholder="Поиск">
+            <button class="search__button" type="submit">Найти</button>
+        </form>
+        <div class="options">
+            <button class="options__button">1</button>
+            <button class="options__button">2</button>
+            <button class="options__button">3</button>
+            <button class="options__button">4</button>
+        </div>
+        <div class="login"></div>
+    </header>
+
+</body>
+</html>
